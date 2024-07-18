@@ -5,7 +5,7 @@
 [![HTML](https://img.shields.io/badge/language-HTML-blue.svg)](https://html.com)
 [![CSS](https://img.shields.io/badge/language-CSS-blue.svg)](https://www.w3.org/Style/CSS/Overview.en.html)
 [![JS](https://img.shields.io/badge/language-JS-blue.svg)](https://www.javascript.com)
-[![PHP](https://img.shields.io/badge/language-JS-blue.svg)](https://www.php.net)
+[![PHP](https://img.shields.io/badge/language-PHP-blue.svg)](https://www.php.net)
 [![WTFPL](https://img.shields.io/badge/license-WTFPL-red.svg)](http://www.wtfpl.net/)
 [![BlackHole Security](https://img.shields.io/badge/team-BlackHole%20Security-ocean.svg)](https://github.com/BlackHoleSecurity)
 [![Gameye98/DedSecTL](https://img.shields.io/badge/author-Gameye98/DedSecTL-red.svg)](https://github.com/Gameye98)
