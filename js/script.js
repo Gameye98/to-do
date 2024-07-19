@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-	readItems();
+	clearButton();
+	const baseUrl = "http://localhost:8080/db_handler.php";
+	const params = {
+		action: "read",
+		data: "",
+		new: ""
+	};
+	const query = new URLSearchParams(params).toString();
+	const urlWithQuery = `${baseUrl}?${query}`;
+	fetch(urlWithQuery).then(response => response.text()).then((data) => {
+		const jsonData = JSON.parse(data);
+		for(x = 0;x < jsonData.length;x++) {
+			addButton(jsonData[x].data,jsonData[x].id);
+		}
+	});
 });
 document.getElementById("addBtn").addEventListener("click", function() {
 	addItem();
@@ -19,8 +33,12 @@ document.addEventListener("click", function(event) {
 		userInput.value = "";
 		const query = new URLSearchParams(params).toString();
 		const urlWithQuery = `${baseUrl}?${query}`;
-		fetch(urlWithQuery);
-		readItems();
+		fetch(urlWithQuery).then(response => response.text()).then((data) => {
+			const jsonData = JSON.parse(data);
+			for(x = 0;x < jsonData.length;x++) {
+				addButton(jsonData[x].data,jsonData[x].id);
+			}
+		});
 	} else if(event.target.id === "deleteBtn") {
 		clearButton();
 		const baseUrl = "http://localhost:8080/db_handler.php";
@@ -31,8 +49,12 @@ document.addEventListener("click", function(event) {
 		};
 		const query = new URLSearchParams(params).toString();
 		const urlWithQuery = `${baseUrl}?${query}`;
-		fetch(urlWithQuery);
-		readItems();
+		fetch(urlWithQuery).then(response => response.text()).then((data) => {
+			const jsonData = JSON.parse(data);
+			for(x = 0;x < jsonData.length;x++) {
+				addButton(jsonData[x].data,jsonData[x].id);
+			}
+		});
 	}
 });
 function clearButton() {
@@ -54,8 +76,12 @@ function addItem() {
 	userInput.value = "";
 	const query = new URLSearchParams(params).toString();
 	const urlWithParams = `${baseUrl}?${query}`;
-	fetch(urlWithParams);
-	readItems();
+	fetch(urlWithParams).then(response => response.text()).then((data) => {
+		const jsonData = JSON.parse(data);
+		for(x = 0;x < jsonData.length;x++) {
+			addButton(jsonData[x].data,jsonData[x].id);
+		}
+	});
 }
 function addButton(str,dataid) {
 	var tr = document.getElementById("tbls");
@@ -82,20 +108,3 @@ function addButton(str,dataid) {
 	td.appendChild(deleteBtn);
 	tr.appendChild(td);
 }
-var readItems = () => {
-	clearButton();
-	const baseUrl = "http://localhost:8080/db_handler.php";
-	const params = {
-		action: "read",
-		data: "",
-		new: ""
-	};
-	const query = new URLSearchParams(params).toString();
-	const urlWithQuery = `${baseUrl}?${query}`;
-	fetch(urlWithQuery).then(response => response.text()).then((data) => {
-		const jsonData = JSON.parse(data);
-		for(x = 0;x < jsonData.length;x++) {
-			addButton(jsonData[x].data,jsonData[x].id);
-		}
-	});
-};
