@@ -14,6 +14,7 @@ body {
 	color: white;
 	height: 100vh;
 	margin: 0;
+	overflow: hidden;
 }
 .container {
 	background-color: #2f2f2f;
@@ -23,7 +24,6 @@ body {
 	align-items: center;
 	padding: 20px;
 	border-radius: 10px;
-	overflow-y: auto;
 }
 .container label {
 	display: flex;
@@ -66,6 +66,8 @@ td {
 	border-color: white;
 	max-width: 100%;
 	overflow-x: auto;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 p {
 	color: white;
@@ -85,21 +87,24 @@ p {
 	color: white;
 	font-family: digital;
 	font-size: 19px;
+	border-radius: 10px;
+	margin-left: 2px;
 }
 .tbl-container {
 	background-color: #2f2f2f;
 	width: 100%;
-	height: 85%;
+	height: 71%;
 	justify-content: center;
 	align-items: center;
 	overflow-y: auto;
+	padding-top: 4px;
+	border-radius: 16px;
 }
 .header-container {
 	width: 100%;
 	height: 35px;
 	display: flex;
 	align-items: center;
-	overflow-x: auto;
 }
 .header-title {
 	color: white;
@@ -111,20 +116,24 @@ p {
 }
 /* Media query for smartphones */
 @media only screen and (max-width: 600px) {
-	body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #1c1c1c;
-		color: white;
-	}
 	.container {
 		background-color: #2f2f2f;
-		height: 70%;
+		height: 100vh;
+		max-height: 100vh;
 		width: 100%;
-		justify-content: center;
-		align-items: center;
+		max-width: 100%;
 		padding: 20px;
-		border-radius: 10px;
+		border-radius: 0px;
+	}
+	.tbl-container {
+		margin-top: 10px;
+		height: 71%;
+	}
+	.header-container {
+		padding-top: 10px;
+		justify-content: center;
+	}
+	.header-title {
+		font-size: 30px;
 	}
 }
