@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 	clearButton();
-	const baseUrl = "http://localhost:8080/db_handler.php";
+	const baseUrl = "/db_handler.php";
 	const params = {
 		action: "read",
 		data: "",
@@ -24,7 +24,7 @@ document.addEventListener("click", function(event) {
 	} else if(event.target.id === "updateBtn") {
 		clearButton();
 		var userInput = document.getElementById("user-input");
-		const baseUrl = "http://localhost:8080/db_handler.php";
+		const baseUrl = "/db_handler.php";
 		const params = {
 			action: "update",
 			data: event.target.getAttribute("data-info"),
@@ -41,7 +41,7 @@ document.addEventListener("click", function(event) {
 		});
 	} else if(event.target.id === "deleteBtn") {
 		clearButton();
-		const baseUrl = "http://localhost:8080/db_handler.php";
+		const baseUrl = "/db_handler.php";
 		const params = {
 			action: "delete",
 			data: event.target.getAttribute("data-info"),
@@ -67,7 +67,7 @@ function addItem() {
 	clearButton();
 	var userInput = document.getElementById("user-input");
 	// Add data to DB
-	const baseUrl ="http://localhost:8080/db_handler.php";
+	const baseUrl ="/db_handler.php";
 	const params = {
 		action: "write",
 		data: userInput.value,
