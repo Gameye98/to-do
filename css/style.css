@@ -1,0 +1,148 @@
+@font-face {
+	font-family: ubuntu;
+	src: url("../font.ttf");
+}
+@font-face {
+	font-family: digital;
+	src: url("../FSEX300.ttf");
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1c1c1c;
+	color: white;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+}
+.container {
+	background-color: #2f2f2f;
+	height: 400px;
+	width: 500px;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	border-radius: 10px;
+}
+.container label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-action {
+	margin-bottom: 6px;
+	width: 100%;
+	height: 35px;
+	border-color: white;
+	background: black;
+	color: white;
+	font-family: digital;
+	font-size: 24px;
+}
+.container input[type="text"] {
+	text-align: center;
+	background-color: black;
+	color: #00ff00;
+	border-color: white;
+	width: 100%;
+	height: 30px;
+	font-family: ubuntu;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+table {
+	width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	background: white;
+	max-width: 100%;
+	table-layout: fixed;
+}
+td {
+	display: flex;
+	align-items: center;
+	background-color: black;
+	border-color: white;
+	max-width: 100%;
+	overflow-x: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+p {
+	color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	width: 50%;
+	max-width: 50%;
+	max-height: 20%;
+	font-family: ubuntu;
+	overflow-x: auto;
+}
+.btn-item {
+	width: 25%;
+	height: 35px;
+	border-color: white;
+	background: black;
+	color: white;
+	font-family: digital;
+	font-size: 19px;
+	border-radius: 10px;
+	margin-left: 2px;
+}
+.tbl-container {
+	background-color: #2f2f2f;
+	width: 100%;
+	height: 71%;
+	justify-content: center;
+	align-items: center;
+	overflow-y: auto;
+	padding-top: 4px;
+	border-radius: 16px;
+}
+.header-container {
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+}
+.header-title {
+	color: white;
+	font-size: 27px;
+	font-weight: bold;
+	font-family: digital;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+/* Media query for smartphones */
+@media only screen and (max-width: 600px) {
+	.container {
+		background-color: #2f2f2f;
+		height: 100vh;
+		max-height: 100vh;
+		width: 100%;
+		max-width: 100%;
+		padding: 20px;
+		border-radius: 0px;
+	}
+	.tbl-container {
+		margin-top: 10px;
+		height: 71%;
+	}
+	.header-container {
+		padding-top: 10px;
+		justify-content: center;
+	}
+	.header-title {
+		font-size: 30px;
+	}
+}
+.login-container {
+	background-color: #2f2f2f;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	height: 400px;
+}
