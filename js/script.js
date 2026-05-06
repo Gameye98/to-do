@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 });
 document.getElementById("addBtn").addEventListener("click", function() {
+	const scrollcont = document.getElementById("scroll-container");
+	const scrollPosition = scrollcont.scrollTop;
 	addItem();
+	setTimeout(() => {
+		scrollcont.scrollTop = scrollPosition;
+	}, 1000);
 });
 document.addEventListener("click", function(event) {
 	if(event.target.id === "user-input") {
